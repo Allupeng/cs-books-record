@@ -7,7 +7,7 @@
 def binary_search_iterative(nums, target):
     low, high = 0, len(nums) - 1
     while low <= high:
-        mid = (low + mid) // 2
+        mid = (low + high) // 2
         guess = nums[mid]
         if guess < target:
             low = mid + 1
@@ -17,6 +17,10 @@ def binary_search_iterative(nums, target):
             return mid
     return None
 
+if __name__ == '__main__':
+    nums = [1, 3, 5, 7, 9]
+    print(binary_search_iterative(nums, 3))
+    print(binary_search_iterative(nums, -1))
 
 
         
